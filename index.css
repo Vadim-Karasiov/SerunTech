@@ -42,6 +42,10 @@ a {
     margin-right: 16px;
 }
 
+.messengers img {
+    cursor: pointer;
+}
+
 .messengers img:last-child {
     margin-right: 0;
 }
@@ -110,6 +114,7 @@ a {
 
 .languages div {
     padding: 6px 10px;
+    cursor: pointer;
 }
 
 .languages .div_active {
@@ -319,17 +324,23 @@ h1, h2 {
     width: 1132px;
     margin: 0 auto;
     border-bottom: 4px solid rgba(203, 216, 229, 1);
-    padding-bottom: 17px;
     margin-bottom: 40px;
     cursor: pointer;
 }
 
 .service_selector div {
-    margin-right: 60px;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.05em;
     position: relative;
+    margin-right: 60px;
+    padding-bottom: 17px;
+    /* cursor: pointer; */
+}
+
+.service_selector div:hover{
+    background-color: var(--table-color);
+    height: 100%;
 }
 
 .service_selector div:last-child {
