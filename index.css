@@ -558,6 +558,18 @@ footer h2 {
         margin-right: 0;
     }
 
+    .sun-text {
+        grid-column: 1 / -1;
+    }
+    
+    .policrystal {
+        grid-column: 1 / span 6;
+    }
+    
+    .monocrystal {
+        grid-column: 7 / -1;
+    }
+
     .phone,
     .viber {
         grid-column: 2 / span 5;
@@ -632,6 +644,18 @@ footer h2 {
     .service_selector div {
         letter-spacing: 0.05em;
         margin-right: 60px;
+    }
+
+    .sun-text {
+        grid-column: 1 / span 4;
+    }
+    
+    .policrystal {
+        grid-column: 5 / span 4;
+    }
+    
+    .monocrystal {
+        grid-column: 9 / -1;
     }
 
     .phone,
