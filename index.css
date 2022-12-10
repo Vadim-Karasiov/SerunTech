@@ -27,7 +27,8 @@ a {
 .header,
 .menu,
 .professional,
-.professional-tab {
+.professional-tab,
+.professional-mob {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -40,7 +41,8 @@ a {
 .table_wrapper,
 .sun_block,
 .contact_block {
-    max-width: 1132px;
+    max-width: 540px;
+    padding: 0  16px 0 16px;
 }
 
 .header {
@@ -61,7 +63,8 @@ a {
 
 .logo,
 .contacts,
-.messengers {
+.messengers,
+.sendwich {
     display: flex;
     align-items: center;
 }
@@ -86,13 +89,9 @@ a {
 
 .menu {
     color: var(--active-color);
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     align-items: center;
-}
-
-.menu__nav {
-    margin-left: 40px;
 }
 
 .header__list {
@@ -100,7 +99,7 @@ a {
 }
 
 .header__list-item {
-    margin-right: 40px;
+    margin-right: 15px;
 }
 
 .header__list-item:last-child {
@@ -155,32 +154,23 @@ a {
 }
 
 .professional_text {
-    margin: auto auto;
-    margin-left: 40px;
-    max-width: 600px;
     color: var(--active-color);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 36px;
+    line-height: 24px;
 }
 
 .why_we {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 73px;
     position: relative;
 }
 
-.text-block {
-    grid-column: 1 / span 6;
-}
-
 .why_we-h3 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
-    line-height: 44px;
+    line-height: 20px;
     letter-spacing: 0.05em;
     margin-bottom: 36px;
 }
@@ -204,52 +194,20 @@ a {
     background-color: #FFD600;
 }
 
-.boilers {
-    grid-column: 7 / span 3;
-    position: relative;
-}
-
-.boilers::after {
+.boilers .img-cover::after {
     content: 'Водонагреватели';
-    position: absolute;
-    top: 118px;
-    left: 48px;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--active-color);
-    text-shadow: 0px 2px 6px 0px rgba(32, 37, 36, 0.5);
-}
- 
-.washing_machine {
-    grid-column: 10 / -1;
-    position: relative;
 }
 
 .washing_machine .img-cover::after {
     content: 'Стиральные машины';
 }
 
-.solid_boilers {
-    grid-column: 1 / span 3;
-    position: relative;
-}
-
 .solid_boilers .img-cover::after {
     content: 'Твёрдотопливные котлы';
 }
 
-.sun_panels {
-    grid-column: 4 / span 6;
-    position: relative;
-}
-
 .sun_panels .img-cover::after {
     content: 'Солнечные панели';
-}
-
-.pumping_station {
-    grid-column: 10 / span 3;
-    position: relative;
 }
 
 .pumping_station .img-cover::after {
@@ -267,7 +225,7 @@ a {
 .img-cover::before {
     content: '';
     width: 100%;
-    height: 98%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -282,22 +240,6 @@ a {
     font-weight: 600;
     color: var(--active-color);
     text-shadow: 0px 2px 6px 0px rgba(32, 37, 36, 0.5);
-}
-
-.low_price {
-    grid-column: 1 / span 3;
-}
-
-.fast_react {
-    grid-column: 4 / span 3;
-}
-
-.special_approach {
-    grid-column: 7 / span 3;
-}
-
-.guarantee {
-    grid-column: 10 / span 3;
 }
 
 .low_price,
@@ -327,9 +269,10 @@ h1, h2 {
     margin-bottom: 44px;
 }
 
+/* -----Main Table------ */
 .service_selector {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     margin: 0 auto;
     border-bottom: 4px solid rgba(203, 216, 229, 1);
     margin-bottom: 40px;
@@ -337,13 +280,10 @@ h1, h2 {
 }
 
 .service_selector div {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    letter-spacing: 0.05em;
     position: relative;
-    margin-right: 60px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 4px;
     transition: background-color 300ms ease;
 }
 
@@ -352,16 +292,12 @@ h1, h2 {
     height: 100%;
 }
 
-.service_selector div:last-child {
-    margin-right: 0;
-}
-
 .service_selector .active::after {
     content: '';
     width: 100%;
     height: 4px;
     position: absolute;
-    top: 52px;
+    top: 68px;
     left: 0;
     background-color: var(--hover-color);
 }
@@ -380,27 +316,35 @@ h1, h2 {
 .table-main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    font-size: 14px;
+}
+
+.table-top {
+    text-align: center;
 }
 
 .table-1_collumn {
-    grid-column: 1 / span 6;
-    padding: 15px 0 18px 32px;
+    grid-column: 1 / span 4;
+    padding: 15px 0 18px 5px;
 }
 
 .table-2_collumn {
-    grid-column: 7 / span 2;
-    padding: 15px 0 18px 32px;
+    grid-column: 5 / span 3;
+    padding: 15px 0 18px 15px;
+    text-align: center;
 }
 
 .table-3_collumn {
-    grid-column: 9 / -1;
-    padding: 15px 0 18px 32px;
+    grid-column: 8 / -1;
+    padding: 15px 0 18px 15px;
+    text-align: center;
 }
 
 .blue-row {
     background-color: var(--table-color);
 }
 
+/* -----Sun panels block----- */
 .sun_block {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -409,13 +353,14 @@ h1, h2 {
     margin-bottom: 120px;
 }
 
-.sun-text {
-    align-self: center;
-    grid-column: 1 / span 4;
+.sun-text,
+.policrystal,
+.monocrystal {
+    grid-column: 1 / -1
 }
 
-.policrystal {
-    grid-column: 5 / span 4;
+.sun-text {
+    align-self: center;
 }
 
 .policrystal img,
@@ -427,10 +372,6 @@ h1, h2 {
 .policrystal-header {
     margin-bottom: 12px;
     font-weight: 600;
-}
-
-.monocrystal {
-    grid-column: 9 / -1;
 }
 
 .BU {
@@ -455,10 +396,14 @@ footer h2 {
 
 .contact_block {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     margin: 0 auto;
     color: var(--active-color);
+}
+
+.contact_block div {
+    margin: 0 auto;
 }
 
 .contact_block img {
@@ -474,37 +419,80 @@ footer h2 {
     align-items: center;
 }
 
-.phone,
-.viber {
-    grid-column: 4 / span 3;
-}
-
-.telegram,
-.email {
-    grid-column: 7 / -1;
-}
-
+/* --------Mobile version------ */
 
 @media (min-width: 360px) {
-    .professional {
+    .contacts img,
+    .messengers,
+    .menu,
+    .professional,
+    .professional-tab {
         display: none;
+    }
+
+    .sendwich img{
+        margin-right: 0;
+    }
+
+    .professional-mob {
+        flex-direction: column;
+        max-width: 540px;
+    }
+
+    .professional-mob .professional_text {
+        margin-top: 26px;
+        margin-bottom: 16px;
+        padding-left: 15px;
+    }
+
+    .text-block,
+    .boilers,
+    .washing_machine,
+    .solid_boilers,
+    .sun_panels,
+    .pumping_station {
+        grid-column: 1 / -1;
+    }
+    
+    .boilers,
+    .washing_machine,
+    .solid_boilers,
+    .sun_panels,
+    .pumping_station {
+        height: 96px;
+    }
+
+    .img-cover {
+        height: 100%;
+    }
+
+    .img-cover img {
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .washing_machine .img-cover img {
+        object-position: center;
+    }
+
+    .boil {
+        text-align: center;
+    }
+    .pump {
+        text-align: right;
     }
 }
 
+@media (min-width: 532px) {
+    .service_selector .active::after {
+        top: 49px;
+    }
+}
+
+/* --------Tab version---------- */
+
 @media (min-width: 768px) {
-    .menu {
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .menu__nav {
-        margin-left: 0;
-    }
-
-    .header__list-item {
-        margin-right: 15px;
-    }
-
     .header,
     .menu,
     .why_we,
@@ -513,15 +501,32 @@ footer h2 {
     .sun_block,
     .contact_block {
         max-width: 654px;
+        padding: 0;
+    }
+
+    .professional-mob,
+    .sendwich {
+        display: none;
+    }
+
+    .contacts img,
+    .messengers,
+    .menu {
+        display: flex;
     }
 
     .professional-tab {
+        display: flex;
         max-width: 700px;
         min-height: 418px;
         position: relative;
         left: 24px;
         margin-top: 35px;
         margin-bottom: 65px;
+    }
+    /* Блок "Почему мы"*/
+    .why_we {
+        grid-template-columns: repeat(12, 1fr);
     }
 
     .text-block {
@@ -531,6 +536,11 @@ footer h2 {
     .boilers {
         grid-column: 8 / -1;
         align-self: center;
+    }
+
+    .boilers .img-cover::after {
+        top: 118px;
+        left: 48px;
     }
 
     .washing_machine {
@@ -549,6 +559,31 @@ footer h2 {
         grid-column: 9 / -1;
     }
 
+    .boilers,
+    .washing_machine,
+    .solid_boilers,
+    .sun_panels,
+    .pumping_station {
+        height: 100%;
+    }
+
+    /* Желтые значки */
+    .low_price {
+        grid-column: 1 / span 3;
+    }
+    
+    .fast_react {
+        grid-column: 4 / span 3;
+    }
+    
+    .special_approach {
+        grid-column: 7 / span 3;
+    }
+    
+    .guarantee {
+        grid-column: 10 / span 3;
+    }
+    /*---Selector Таблицы---*/
     .service_selector {
         justify-content: space-between;
     }
@@ -557,6 +592,30 @@ footer h2 {
         letter-spacing: 0;
         margin-right: 0;
     }
+
+    .service_selector .active::after {
+        top: 49px;
+    }
+    /*---Таблица---*/
+    .table-1_collumn {
+        grid-column: 1 / span 6;
+        padding: 15px 0 18px 32px;
+    }
+    
+    .table-2_collumn {
+        grid-column: 7 / span 2;
+        padding: 15px 0 18px 32px;
+    }
+    
+    .table-3_collumn {
+        grid-column: 9 / -1;
+        padding: 15px 0 18px 32px;
+    }
+
+    /* ---Sun panels block-- */
+    /* .sun_block {
+        grid-template-columns: repeat(12, 1fr);
+    } */
 
     .sun-text {
         grid-column: 1 / -1;
@@ -569,7 +628,11 @@ footer h2 {
     .monocrystal {
         grid-column: 7 / -1;
     }
-
+    /*----- Footer ------*/
+    .contact_block {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
     .phone,
     .viber {
         grid-column: 2 / span 5;
@@ -580,6 +643,8 @@ footer h2 {
         grid-column: 8 / -1;
     }
 }
+
+/* --------Web version---------- */
 
 @media (min-width: 1150px) {
     .header,
@@ -609,8 +674,22 @@ footer h2 {
         display: flex;
     }
 
+    .professional_text {
+        margin: auto auto;
+        margin-left: 40px;
+        max-width: 600px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+    }
+
     .professional-tab {
         display: none;
+    }
+
+    .why_we-h3 {
+        font-size: 36px;
+        line-height: 44px;
     }
 
     .text-block {
@@ -644,6 +723,10 @@ footer h2 {
     .service_selector div {
         letter-spacing: 0.05em;
         margin-right: 60px;
+    }
+
+    .service_selector div:last-child {
+        margin-right: 0;
     }
 
     .sun-text {
