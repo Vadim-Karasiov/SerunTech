@@ -542,15 +542,22 @@ footer h2 {
 
 /* --------Tab version---------- */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     body {
          position:fixed;
     }
- }
+ } */
 
  /* @viewport {
     user-zoom: fixed;
   } */
+  
+@media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden;
+        height: 100vh;
+    }
+}
 
 @media (min-width: 768px) {
     .header,
