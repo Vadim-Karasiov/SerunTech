@@ -542,6 +542,16 @@ footer h2 {
 
 /* --------Tab version---------- */
 
+@media (max-width: 767px) {
+    body {
+         position:fixed;
+    }
+ }
+
+ /* @viewport {
+    user-zoom: fixed;
+  } */
+
 @media (min-width: 768px) {
     .header,
     .menu,
